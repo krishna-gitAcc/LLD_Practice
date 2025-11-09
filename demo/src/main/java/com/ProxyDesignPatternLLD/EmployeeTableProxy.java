@@ -10,7 +10,7 @@ public class EmployeeTableProxy extends EmployeeTable {
     }
 
     @Override
-    public void createEmployee(String name, java.security.Permission permission) {
+    public void createEmployee(String name, EmployeeTable permission) {
         if (userRole.equals("ADMIN")) {
             employeeTableImp.createEmployee(name, permission);
         } else {
